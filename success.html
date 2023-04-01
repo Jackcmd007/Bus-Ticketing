@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bus Ticketing App - Purchase Successful</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Purchase Successful</h1>
+    <p>Your ticket has been purchased successfully!</p>
+    <p>Please present the QR code below to the driver when boarding the bus.</p>
+    <div id="qr-code"></div>
+    <!-- Rest of the code for the success page -->
+
+    <!-- QR code library -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <!-- QR code generation script -->
+    <script>
+      // Get the QR code element
+      const qrCodeElement = document.getElementById("qr-code");
+
+      // Generate the QR code with the ticket data
+      const qrCode = new QRCode(qrCodeElement, {
+        text: "Ticket data goes here",
+        width: 256,
+        height: 256,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+      });
+    </script>
+  </body>
+</html>
