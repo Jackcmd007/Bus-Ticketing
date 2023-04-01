@@ -3,24 +3,39 @@
   <head>
     <title>Bus Ticketing App - Purchase Tickets</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="purchase.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@600&family=El+Messiri&family=Handlee&family=Lobster&family=Sacramento&family=Square+Peg&display=swap" rel="stylesheet">  </head>
   </head>
   <body>
-    <h1>Purchase Tickets</h1>
-    <form action="success.html">
-      <label for="route">Route:</label>
-      <select id="route">
-        <option value="route1">Route 1</option>
-        <option value="route2">Route 2</option>
-        <option value="route3">Route 3</option>
-      </select>
-      <label for="date">Date:</label>
-      <input type="date" id="date">
-      <label for="time">Time:</label>
-      <input type="time" id="time">
-      <label for="quantity">Quantity:</label>
-      <input type="number" id="quantity" min="1" max="10">
-      <button type="submit">Purchase</button>
-    </form>
+    <nav>
+      <ul>
+          <li><a href="purchase.html">Purchase Tickets</a></li>
+          <li><a href="scheddule.html">View Schedule</a></li>
+          <li><a href="manage.html">Manage Account</a></li>
+          <li><a href="status.html">Status</a></li>
+      </ul>
+  </nav>
+  <h1>Purchase Tickets</h1>
+  <img src="busicon.png" alt="road" class="road2"style= "display:inlineblock; position: absolute; left:100px;top:250px;">
+    <div class="form2" style="display: inline-block; ">
+      <form action="success.html" style="display: inline-block;">
+        <label for="route">Route:</label>
+        <select id="route">
+          <option value="route1">Route 1</option>
+          <option value="route2">Route 2</option>
+          <option value="route3">Route 3</option>
+        </select>
+        <label for="date">Date:</label>
+        <input type="date" id="date">
+        <label for="time">Time:</label>
+        <input type="time" id="time">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" min="1" max="10">
+        <button type="submit">Purchase</button>
+      </form>
+    </div>
     <!-- Rest of the code for the home page -->
   </body>
 </html>

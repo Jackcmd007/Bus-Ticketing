@@ -1,16 +1,29 @@
 nav {
-  background-color: #333;
+  background-color: #2C3333;
   overflow: hidden;
+  border: 0;
+  border-radius: 20px;
+  font-size: 18px;
+  font-family: 'El Messiri', sans-serif;
+}
+
+body{
+  background-color: #CBE4DE;
+}
+
+.road2{
+  float: left;
 }
 
 nav ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-left: 20%;
 }
 
 nav li {
   float: left;
+  padding-right: 10%;
 }
 
 nav li a {
@@ -36,6 +49,11 @@ label {
   margin: 10px;
 }
 
+h1{
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+}
+
 input[type="date"],
 input[type="time"],
 input[type="number"] {
@@ -47,7 +65,7 @@ input[type="number"] {
 button[type="submit"] {
   margin: 20px;
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #0E8388;
   color: white;
   border: none;
   border-radius: 5px;
@@ -55,7 +73,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: #0c757a;
 }
 
 
@@ -109,7 +127,7 @@ table {
   }
   
 #promotion-banner {
-  background-color: #ffcc00;
+  background-color: #2E4F4F;
   text-align: center;
   padding: 10px;
 }

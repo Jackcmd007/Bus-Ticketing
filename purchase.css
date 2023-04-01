@@ -1,0 +1,29 @@
+nav {
+    background-color: #2C3333;
+    overflow: hidden;
+    border: 0;
+    border-radius: 20px;
+    font-size: 18px;
+    font-family: 'El Messiri', sans-serif;
+  }
+
+body{
+    font-family: 'El Messiri', sans-serif;
+}
+
+.form2{
+    background-color: #2E4F4F;
+    border-radius: 25px;
+    position: absolute;
+    left: 637.5px;
+    padding: 20px 50px;
+    color: #CBE4DE;
+}
+
+input{
+    border-radius: 10px;
+}
+
+#route{
+    border-radius: 10px;
+}

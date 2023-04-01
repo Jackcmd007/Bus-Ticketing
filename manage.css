@@ -1,0 +1,28 @@
+.formdiv{
+    width: 40%;
+    background-color: #2E4F4F;
+    color: #CBE4DE;
+    border-radius: 25px;
+    padding: 20px;
+    font-family: 'El Messiri', sans-serif;
+    margin-right: 320px;
+  }
+  
+  .road1{
+    float: left;
+    width: 20%;
+    margin-top: 100px;
+    margin-left: 45px;
+  }
+
+input{
+    border-radius: 25px;
+    width:75%;
+}
+h1{
+    font-family: 'Bebas Neue', cursive;
+}
+
+form{
+    display: inline-block;
+}
