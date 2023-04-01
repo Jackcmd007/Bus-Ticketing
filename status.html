@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bus Tracking</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Bus Tracking</h1>
+    <form>
+      <label for="bus-id">Bus ID:</label>
+      <input type="text" id="bus-id" placeholder="Enter Bus ID">
+      <label for="pnr">PNR Number:</label>
+      <input type="text" id="pnr" placeholder="Enter PNR Number">
+      <button type="submit">Track</button>
+    </form>
+    <div id="bus-status">
+      <!-- Bus status updates will be displayed here -->
+    </div>
+    <script>
+      const form = document.querySelector('form');
+      const busIdInput = document.querySelector('#bus-id');
+      const pnrInput = document.querySelector('#pnr');
+      const busStatusDiv = document.querySelector('#bus-status');
+      
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        let busId = busIdInput.value;
+        let pnr = pnrInput.value;
+        if (busId) {
+          // Make API request to get bus status by ID
+          fetch(`https://example.com/bus?id=${busId}`)
+            .then(response => response.json())
+            .then(data => {
+              // Update bus status in DOM
+              busStatusDiv.textContent = `Bus ${busId}: ${data.status}`;
+            })
+            .catch(error => {
+              console.error(error);
+              busStatusDiv.textContent = `Error: could not retrieve status for Bus ${busId}`;
+            });
+        } else if (pnr) {
+          // Make API request to get bus status by PNR number
+          fetch(`https://example.com/bus?pnr=${pnr}`)
+            .then(response => response.json())
+            .then(data => {
+              // Update bus status in DOM
+              busStatusDiv.textContent = `Bus ${data.busId}: ${data.status}`;
+            })
+            .catch(error => {
+              console.error(error);
+              busStatusDiv.textContent = `Error: could not retrieve status for PNR ${pnr}`;
+            });
+        } else {
+          // Display error message if neither input is provided
+          busStatusDiv.textContent = 'Please enter either a Bus ID or PNR Number';
+        }
+      });
+    </script>
+  </body>
+</html>
